@@ -26,5 +26,5 @@ console.log("Maths");
 // console.log(Math.pow(4));                 // Find Power
 // console.log(Math.min(4, 3, 6, 8, 10));    // Find Minimun Lowest Number
 // console.log(Math.max(4, 3, 6, 8, 10));    // Find Maximun Topest Number
-
+    
 

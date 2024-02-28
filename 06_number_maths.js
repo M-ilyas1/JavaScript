@@ -20,8 +20,8 @@
 console.log("Maths");
 // console.log(Math.abs(-4));                // Remove - sign
 // console.log(Math.round(4.00));            // Remove all value after .
-// console.log(Math.ceil(4.2));              // Go for Top Number
-// console.log(Math.floor(4.2));             // Go for Lowest Number
+// console.log(Math.ceil(4.2));              // Go with Top Number
+// console.log(Math.floor(4.2));             // Go with Lowest Number
 // console.log(Math.sqrt(4));                // Find Squre Root
 // console.log(Math.pow(4));                 // Find Power
 // console.log(Math.min(4, 3, 6, 8, 10));    // Find Minimun Lowest Number

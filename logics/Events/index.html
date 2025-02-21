@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM - Events</title>
+  </head>
+  <body>
+    <ul>
+      <li id="red" class="colors">Red</li>
+      <li id="yellow" class="colors">Yellow</li>
+      <li id="green" class="colors">Green</li>
+      <li id="orange" class="colors">Orange</li>
+      <li id="pink" class="colors">Pink</li>
+    </ul>
+  </body>
+  <script>
+
+    // document.querySelectorAll(".colors").forEach((item) => {
+    //   item.addEventListener("click", function (e) {
+    //     alert("The click color is " + e.target.innerHTML);
+    //   });
+    // });
+
+    document.getElementById('red').addEventListener('click', function(e){
+        alert("You click on " + e.target.innerHTML + " Color");
+    })
+    // document.getElementById('pink').addEventListener('click', function(){
+    //     alert("Woooow");
+    // })
+  </script>
+</html>

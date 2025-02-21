@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Edit and Delete</title>
+</head>
+<body style="background-color: rgb(51, 50, 50); color: white;">
+
+    <ul class="languages">
+        <li>JavaScript</li>
+        <!-- add item using javascript -->
+    </ul>
+    
+
+</body>
+    <script>
+        function addList(item) {
+            let addList =  document.createElement("li")
+            addList.appendChild(document.createTextNode(item))
+            document.querySelector("ul").appendChild(addList)
+
+            console.log(addList);
+        }
+        addList("Java");
+        addList("C++");
+
+       
+    </script>
+</html>

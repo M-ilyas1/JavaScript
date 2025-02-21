@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body id="body">
+    <!-- <div class="parent">
+        <h1>Monday</h1>
+        <h1>Tuesday</h1>
+        <h1>Wesnesday</h1>
+        <h1>Thusday</h1>
+        <h1>Friday</h1>
+    </div> -->
+    
+</body>
+<script>
+    // let body = document.querySelector("body")
+    // body.style.backgroundColor = "green";
+
+    function createDiv(value) {
+
+        let div = document.createElement("div");
+        div.id = Math.floor(Math.random() * 10);
+        div.className = "newDiv";
+
+        // styling
+        div.style.backgroundColor = "black";
+        div.style.color = "white";
+        div.style.fontSize = "40px";
+        div.style.borderRadius = "20px";
+        div.style.fontWeight = "bold";
+        div.style.textAlign = "center";
+        div.style.padding = "20px";
+        div.style.marginTop = "10px";
+        
+        // show on Screen
+        let addText = document.createTextNode(value);
+        div.appendChild(addText);
+    
+        document.body.appendChild(div)
+        
+        console.log(div);
+    }
+    
+    createDiv("Hello")
+    createDiv("I love DOM - Document Object Model")
+
+    
+    
+    
+
+
+    // -------------------------------------------
+
+    // let parent = document.querySelector(".parent");
+    // console.log(parent.children)
+
+    // for (let index = 0; index < parent.children.length; index++) {
+    //     // console.log(parent.children[index].innerHTML);
+    // }
+    // parent.children[1].style.color = "red";
+
+    
+    
+</script>
+</html>

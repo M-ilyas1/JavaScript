@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>
+        <form action="" id="form">
+            <input type="text" id="input" placeholder="add text you want">
+            <button type="submit" id="button">Add</button>
+        </form>
+        <ul id="list">
+
+        </ul>
+    </div>
+    
+</body>
+<script>
+
+        let form = document.getElementById('form')
+        let input = document.getElementById('input')
+        let button = document.getElementById('button')
+        let list = document.getElementById('list')
+        
+        form.addEventListener('submit', (e) => {
+            e.preventDefault()
+            let value = input.value.trim();
+
+            let createList = document.createElement('li')
+            createList.innerHTML= `${value} <button class='delete'>x</button> <button class='edit'>edit</button>`
+    
+            if (value === '') {
+                list.innerText = 'Enter a value Please'
+                return;
+            }else{
+                list.appendChild(createList)
+            }
+            input.value = ''
+
+            createList.querySelector('.delete').addEventListener('click', () => {
+                createList.remove()
+            })
+            createList.querySelector('.edit').addEventListener('click', () => {
+                let newValue = prompt('Edit your task:', value);
+                if (newValue !== null && newValue.trim() !== '') {
+                    createList.firstChild.nodeValue = newValue + ' ';
+                }
+            });   
+        })
+</script>
+</html>

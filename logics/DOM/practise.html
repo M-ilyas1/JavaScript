@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM</title>
+  </head>
+  <body>
+    <div id="main">
+      <span class="days">Monday</span>
+      <span class="days">Tuesday</span>
+      <span class="days">Wednesday</span>
+      <span class="days">Thusday</span>
+      <span class="days">Friday</span>
+    </div>
+  </body>
+  <script>
+    let parent = document.getElementById('main')
+    // console.log(parent);
+    // console.log(parent.children[1].innerHTML);
+    
+    let newElement = document.createElement('span')
+    newElement.innerText = "Satarday";
+    // console.log(newElement);
+    parent.appendChild(newElement)
+    parent.lastElementChild.innerText = "Sunday"
+    
+    let getIntheFormOfArray = document.getElementsByClassName('days')
+    getIntheFormOfArray[0].remove();
+
+    
+    // parent.firstElementChild.remove()
+    
+    
+    for (let i = 0; i < parent.children.length; i++) {
+      console.log(parent.children[i].innerHTML);
+      
+    }
+    
+  </script>
+</html>

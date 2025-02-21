@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - Tasks</title>
+</head>
+<style>
+    #box{
+        border: 2px solid black;
+        padding: 10px;
+        border-radius: 10px;
+        width: 50%;
+        margin: auto;
+    }
+</style>
+<body>
+    <!-- <div id="box">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, recusandae.</p>
+        <button id="ChangeColor">Chnage the theame</button>
+    </div> -->
+
+    <!-- <div id="hiddenPara">
+        <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quod optio, quidem molestiae nihil deserunt ipsam, quos commodi animi voluptatum ad illo natus. Quaerat quia quis ex delectus, laboriosam optio.</p>
+        <button id="hidePara">Hidden Paragraph</button>
+        <button id="showPara">Show Paragraph</button>
+    </div> -->
+
+    <div id="liveChat">
+        <input type="text" id="input">
+        <span id="ShowInputText"></span>
+    </div>
+
+
+</body>
+<script>
+    let ShowText = document.getElementById('ShowInputText')
+    console.log(ShowText);
+
+    document.getElementById('input').addEventListener('input', (e) => {
+        ShowText.innerText = e.target.value;
+    })
+    
+    
+
+
+    // let para = document.getElementById('para')
+    
+    // document.getElementById('hidePara').addEventListener('click', () => {
+    //     para.style.visibility = 'hidden'
+    // })
+    // document.getElementById('showPara').addEventListener('click', () => {
+    //     para.style.visibility = 'visible'
+    // })
+
+
+
+
+
+    // let box = document.getElementById('box')
+    // console.log(box); 
+    // let isDark = false
+
+    // document.getElementById('ChangeColor').addEventListener('click', () => {
+    //     if(isDark){
+    //         box.style.backgroundColor = 'white'
+    //         box.style.color = 'black'
+    //     }else{
+    //         box.style.backgroundColor = 'black'
+    //         box.style.color = 'white'
+    //     }
+    //     isDark = !isDark;
+    // })
+
+    
+</script>
+</html>
